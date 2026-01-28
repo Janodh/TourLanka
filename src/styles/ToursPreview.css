@@ -1,0 +1,127 @@
+.tours-section {
+  background: #f8fafc;
+  padding: 6rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: #020617;
+}
+
+/* GRID */
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.tour-card {
+  background: #020617;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGE */
+.tour-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tour-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.85));
+}
+
+.tour-duration {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #facc15;
+  color: #020617;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  z-index: 1;
+}
+
+/* CONTENT */
+.tour-content {
+  padding: 1.5rem;
+}
+
+.tour-content h3 {
+  color: #facc15;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.tour-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.tour-content ul li {
+  margin-bottom: 6px;
+}
+
+.tour-content strong {
+  color: #facc15;
+}
+
+/* FOOTER */
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.price {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.tour-footer button {
+  background: #facc15;
+  color: #020617;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tour-footer button:hover {
+  background: #fde047;
+  transform: scale(1.05);
+}

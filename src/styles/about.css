@@ -1,0 +1,133 @@
+.about-section {
+  padding: 6rem 0;
+}
+
+.bg-dark {
+  background-color: #020617;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text-dark {
+  color: #020617;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.about-title span {
+  color: #facc15;
+}
+
+.about-subtitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.about-text {
+  line-height: 1.7;
+}
+
+.about-highlight {
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* Cards */
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-icon {
+  color: #facc15;
+  font-size: 1.75rem;
+}
+
+/* List */
+.about-list-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+  border-radius: 18px;
+}
+
+.about-check {
+  color: #facc15;
+  margin-top: 0.25rem;
+}
+
+/* Trust */
+.about-trust {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 3rem;
+}
+
+.about-shield {
+  color: #facc15;
+  font-size: 3rem;
+  margin: 0 auto 1rem;
+}
+
+/* Vision & Mission */
+.vision-card,
+.mission-card {
+  background: linear-gradient(145deg, #f8fafc, #eef2ff);
+  border-radius: 26px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-card:hover,
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.15);
+}
+
+.vision-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #020617;
+  position: relative;
+}
+
+.vision-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #facc15;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
+.trust-logo {
+  height: 150px;
+  width: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
+}

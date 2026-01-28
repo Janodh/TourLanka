@@ -1,0 +1,52 @@
+.intro-hero {
+  background: linear-gradient(120deg, #0f172a, #020617);
+  color: white;
+  padding: 80px 20px 70px;
+}
+
+.intro-overlay {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  color: #cbd5f5;
+}
+
+.crumb a {
+  color: #eab308;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.crumb a:hover {
+  opacity: 0.7;
+}
+
+.separator {
+  margin: 0 6px;
+  color: #94a3b8;
+}
+
+.current {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Title */
+.intro-overlay h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.intro-overlay p {
+  font-size: 1.05rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
