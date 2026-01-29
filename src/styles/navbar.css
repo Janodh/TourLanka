@@ -1,26 +1,32 @@
-/* NAVBAR WRAPPER */
+/* ================================
+   NAVBAR WRAPPER (Glass Effect)
+================================ */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 50;
+    z-index: 1000;
     background: rgba(2, 6, 23, 0.85);
-    /* #020617 glass */
+    /* glass dark */
     backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* INNER */
+/* ================================
+   CONTAINER
+================================ */
 .navbar-container {
     max-width: 1280px;
     margin: auto;
     padding: 1rem 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-/* LOGO */
+/* ================================
+   LOGO
+================================ */
 .navbar-logo {
     font-size: 1.25rem;
     font-weight: 700;
@@ -33,9 +39,12 @@
     color: #facc15;
 }
 
-/* LINKS */
+/* ================================
+   NAV LINKS (DESKTOP)
+================================ */
 .navbar-links {
     display: flex;
+    align-items: center;
     gap: 2.5rem;
     font-size: 0.875rem;
     font-weight: 500;
@@ -52,7 +61,7 @@
     color: #facc15;
 }
 
-/* UNDERLINE ANIMATION */
+/* underline animation */
 .navbar-link::after {
     content: "";
     position: absolute;
@@ -68,7 +77,9 @@
     width: 100%;
 }
 
-/* CTA BUTTON */
+/* ================================
+   CTA BUTTON
+================================ */
 .navbar-cta {
     background: #facc15;
     color: #020617;
@@ -85,4 +96,65 @@
 .navbar-cta:hover {
     background: #fde047;
     transform: translateY(-1px);
+}
+
+/* hide mobile CTA on desktop */
+.mobile-cta {
+    display: none;
+}
+
+/* ================================
+   HAMBURGER TOGGLE
+================================ */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+/* ================================
+   MOBILE STYLES
+================================ */
+@media (max-width: 768px) {
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .desktop-cta {
+        display: none;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(2, 6, 23, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+        display: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .mobile-cta {
+        display: block;
+        margin-top: 0.5rem;
+    }
 }
