@@ -51,6 +51,13 @@ export default function Navbar() {
           >
             Contact
           </Link>
+          <Link
+            href="/gallery"
+            className="navbar-link"
+            onClick={() => setOpen(false)}
+          >
+            Gallery
+          </Link>
 
           <button className="navbar-cta mobile-cta">Book Now</button>
         </nav>
