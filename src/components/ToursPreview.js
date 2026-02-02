@@ -1,8 +1,10 @@
 import "@/styles/ToursPreview.css";
+import Link from "next/link";
 
 export default function ToursPreview() {
   const tours = [
     {
+      slug: "negombo-lagoon-dutch-canal",
       title: "Negombo Lagoon & Historic Dutch Canal",
       duration: "2 hours",
       times: ["8:00 AM", "10:30 AM", "4:30 PM"],
@@ -12,6 +14,7 @@ export default function ToursPreview() {
       image: "/adventure.jpg",
     },
     {
+      slug: "muthurajawela-marshes",
       title: "Muthurajawela Marshes Nature Reserve",
       duration: "3 hours",
       times: ["7:00 AM", "9:00 AM", "3:30 PM"],
@@ -21,6 +24,7 @@ export default function ToursPreview() {
       image: "/Muthurajawela.jpg",
     },
     {
+      slug: "cultural-village-tour",
       title: "Cultural Village Tour",
       duration: "4 hours",
       times: ["9:00 AM", "1:00 PM", "3:00 PM"],
@@ -30,6 +34,7 @@ export default function ToursPreview() {
       image: "/NewPrivateTour_new_.jpg",
     },
     {
+      slug: "beach-sunset-cruise",
       title: "Beach Sunset Cruise",
       duration: "2.5 hours",
       times: ["4:00 PM", "5:30 PM"],
@@ -37,6 +42,46 @@ export default function ToursPreview() {
       age: "All ages",
       fitness: "Low",
       image: "/tailer_made_tour_photo_010.jpg",
+    },
+    {
+      slug: "mangrove-kayaking-adventure",
+      title: "Mangrove Kayaking Adventure",
+      duration: "2 hours",
+      times: ["7:30 AM", "3:30 PM"],
+      price: "LKR 7,500",
+      age: "12+",
+      fitness: "Medium",
+      image: "/NewPrivateTour_new_.jpg",
+    },
+    {
+      slug: "bird-watching-lagoon-safari",
+      title: "Bird Watching Lagoon Safari",
+      duration: "3 hours",
+      times: ["6:30 AM", "4:00 PM"],
+      price: "LKR 7,000",
+      age: "All ages",
+      fitness: "Low",
+      image: "/tailer_made_tour_photo_010.jpg",
+    },
+    {
+      slug: "private-family-boat-tour",
+      title: "Private Family Boat Tour",
+      duration: "2 hours",
+      times: ["Flexible"],
+      price: "LKR 10,000",
+      age: "All ages",
+      fitness: "Low",
+      image: "/adventure.jpg",
+    },
+    {
+      slug: "luxury-catamaran-experience",
+      title: "Luxury Catamaran Experience",
+      duration: "3 hours",
+      times: ["Sunset Only"],
+      price: "LKR 15,000",
+      age: "All ages",
+      fitness: "Low",
+      image: "/Muthurajawela.jpg",
     },
   ];
 
@@ -47,7 +92,11 @@ export default function ToursPreview() {
 
         <div className="tours-grid">
           {tours.map((tour) => (
-            <div className="tour-card" key={tour.title}>
+            <Link
+              href={`/tours/${tour.slug}`}
+              className="tour-card"
+              key={tour.slug}
+            >
               <div
                 className="tour-image"
                 style={{ backgroundImage: `url(${tour.image})` }}
@@ -75,7 +124,7 @@ export default function ToursPreview() {
                   <button>Book Now</button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

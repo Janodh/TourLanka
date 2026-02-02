@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const slides = [
   {
@@ -73,13 +74,17 @@ export default function Hero() {
             <p className="mt-6 max-w-xl mx-auto text-gray-300">{slide.desc}</p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-yellow-500 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">
-                View Tours
-              </button>
+              <Link href="/tours">
+                <button className="bg-yellow-500 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">
+                  View Tours
+                </button>
+              </Link>
 
-              <button className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition">
-                About Us
-              </button>
+              <Link href="/about">
+                <button className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition">
+                  About Us
+                </button>
+              </Link>
             </div>
           </div>
         ))}

@@ -103,7 +103,7 @@ export default function ToursPreview() {
         <div className="tours-grid">
           {tours.map((tour) => (
             <Link
-              href={`/tour/${tour.slug}`}
+              href={`/tours/${tour.slug}`}
               className="tour-card"
               key={tour.slug}
             >
@@ -131,7 +131,8 @@ export default function ToursPreview() {
 
                 <div className="tour-footer">
                   <span className="price">{tour.price}</span>
-                  <span className="view-btn">View Details →</span>
+                  <button>View Details</button>
+                  {/* <span className="view-btn">View Details →</span> */}
                 </div>
               </div>
             </Link>

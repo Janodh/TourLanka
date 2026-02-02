@@ -1,0 +1,54 @@
+/* TourSwiper.css */
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  /* button color */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* Change default arrow size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 5px;
+  /* arrow size */
+  font-weight: bold;
+}
+
+/* Pagination bullets */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+  transform: scale(1.2);
+}
+
+:is(.swiper-button-prev, .swiper-button-next) svg {
+  object-fit: contain;
+  transform-origin: center;
+  fill: currentColor;
+  pointer-events: none;
+  width: 101%;
+  height: 72%;
+}

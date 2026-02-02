@@ -14,6 +14,21 @@ export default function Footer() {
               experiences, and local experts dedicated to unforgettable
               journeys.
             </p>
+            <div className="flex items-start gap-3 mt-5">
+              <img
+                src="/sltda-logo.png" // place logo in /public folder
+                alt="SLTDA Registered"
+                className="w-14 h-auto object-contain"
+              />
+              <div className="text-xs leading-snug">
+                <p className="text-gray-300 font-medium">
+                  SLTDA Registered Eco-Tourism Operator
+                </p>
+                <p className="text-gray-500">
+                  Registration No: SLTDA/SQA/WS/00116
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Company */}
